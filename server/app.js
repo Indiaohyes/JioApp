@@ -1,4 +1,4 @@
-// Importing modules
+// Import modules
 const
     express = require('express'),
     morgan = require('morgan'),
@@ -15,8 +15,8 @@ process.env.NODE_ENV === 'development' && app.use(morgan('dev'));
 // Mounting routers
 app.use('/api/services', serviceRouter);
 
-// Handling all errors
+// Handle all errors
 app.use(errorController);
 
-// Exporting reference to main application
+// Export reference to main application
 module.exports = app;
